@@ -7,24 +7,24 @@ int main()
 {
     setlocale(LC_ALL, "portuguese");
 
-    char produtos[4][100];
+    char produtos[2][100];
     int i, y;
     float quantia, somativa, vmd, tr[4], emin, lr[4], emax, ea[4];
 
     printf("Bem-vindo ao estoque! Para sabermos o andamento, ser solicitado informaçõees importantes para prosseguimento. \n");
 
-    for (i = 0; i < 4; i++)
+    for (i = 0; i < 2; i++)
     {
         printf("Lista dos produtos - %dº produto: \n", i + 1);
         fflush(stdin);
-        gets(produtos);
+        gets(produtos[2]);
 
-        for (y = 0; y < 3; y++)
+        for (y = 0; y < 5; y++)
         {
-            printf("Quais foram a quantia de cada produto dentro de três meses ? Responda em sequência: \n", i + 1);
+            printf("Quais foram a quantia de cada produto dentro de cinco meses ? Responda em sequência: \n", i + 1);
             scanf("%f", &quantia);
             somativa += quantia;
-            vmd = (somativa / 3) / 25;
+            vmd = (somativa / 5) / 22;
         }
 
         printf("Ótimo! Revelando os resultados das informacoes aplicadas:\n");
